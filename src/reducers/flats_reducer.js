@@ -3,6 +3,13 @@ const flatsReducer = (state, action) => {
     // Reducer initialisation
     return [];
   }
-  // TODO: handle some actions
+
+  if (action.type === 'SET_FLATS') {
+    return action.payload;
+  }
+  else {
+    return state;
+  }
 };
+
 export default flatsReducer;

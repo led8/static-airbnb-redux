@@ -6,7 +6,7 @@ import { createStore, combineReducers } from 'redux';
 
 import '../assets/stylesheets/application.scss';
 
-import flatsReducer from './reducers/flat_reducer.js';
+import flatsReducer from './reducers/flats_reducer.js';
 const reducers = combineReducers({
   flats: flatsReducer
 });

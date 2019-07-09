@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+
 import Flat from '../components/flat.jsx';
+import setFlats from '../actions';
 
 class FlatList extends Component {
-  static defaultProps = {
-    flats: [{
-      "name": "Charm at the Steps of Montmartre",
-      "imageUrl": "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat1.jpg",
-      "price": 164,
-      "priceCurrency": "EUR"
-    }]
-  }
-
   componentWillMount() {
+    this.props.setFlats()
     // TODO: dispatch an action to load flats!
   }
 
@@ -24,4 +20,19 @@ class FlatList extends Component {
   }
 }
 
-export default FlatList;
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators( {
+    setFlats: setFlats },
+    dispatch
+  );
+}
+
+function mapStateToProps(reduxState) {
+  return {
+    flats: reduxState.flats
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (FlatList);
+
+// export default connect(null, mapDispatchToProps)(FlatList);
