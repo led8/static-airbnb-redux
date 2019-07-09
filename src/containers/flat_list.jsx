@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import Flat from '../components/flat.jsx';
-import setFlats from '../actions';
+import Flat from '../containers/flat.jsx';
+
+import {setFlats} from '../actions';
 
 class FlatList extends Component {
   componentWillMount() {
@@ -19,6 +20,7 @@ class FlatList extends Component {
     )
   }
 }
+
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators( {

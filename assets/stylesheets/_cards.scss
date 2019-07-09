@@ -5,9 +5,6 @@
   background-position: center;
   color: white;
   position: relative;
-  &.active {
-    border: 10px solid red;
-  }
 }
 .card-user {
   position: absolute;
@@ -48,5 +45,9 @@
 }
 .card-link:hover {
   opacity: 0.1;
+}
+
+.selected {
+  border: 6px dashed red;
 }
 
