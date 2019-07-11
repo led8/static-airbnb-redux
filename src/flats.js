@@ -1,3 +1,7 @@
+// ********************************************************** //
+
+// Wer don't need anymore flats const because of fetch method //
+
 const flats = [
   {
     "id": 145,
@@ -56,3 +60,6 @@ const flats = [
 ]
 
 export default flats;
+
+// ********************************************************** //
+
