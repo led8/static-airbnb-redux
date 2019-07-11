@@ -21,7 +21,7 @@ class Map extends Component {
 
     return (
       <div className="col-sm-5" style={style}>
-        <GoogleMapReact bootstrapURLKeys={{ key: CONST_GOOGLE_MAP_API }}
+        <GoogleMapReact bootstrapURLKeys={{ key: "AIzaSyA0B8vEtPNbY0QljCcdPmB3ctx4VpSl_A4" }}
                         center={center}
                         defaultZoom={15}>
           {marker}

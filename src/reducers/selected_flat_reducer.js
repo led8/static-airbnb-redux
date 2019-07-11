@@ -1,4 +1,4 @@
-const selectefFlatReducer = (state, action) => {
+const selectedFlatReducer = (state, action) => {
   if (state === undefined) {
     // Reducer initialisation
     return [];
@@ -12,4 +12,4 @@ const selectefFlatReducer = (state, action) => {
   }
 };
 
-export default selectefFlatReducer;
+export default selectedFlatReducer;
